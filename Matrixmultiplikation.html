@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Matrizenmultiplikation</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="GreenSock/TweenLite.min.js"></script>
+	<script type="text/javascript" src="GreenSock/CSSPlugin.min.js"></script>
+	<script type="text/javascript" src="GreenSock/CSSRulePlugin.min.js"></script>
+	<script type="text/javascript" src="GreenSock/EasePack.min.js"></script>
+</head>
+<body>
+	<div id="Main">
+		<h1>Matrizenmultiplikation</h1>
+		<div class="hint">
+			<h4>Hinweise</h4>
+			Zum Bearbeiten der Matrix A oder B, auf eine Zahl klicken. <br />
+			Mit der <kbd>Leertaste</kbd> können Sie neue Spalten erzeugen. <br />
+			Mit <kbd>Enter</kbd> erstellen Sie eine neue Zeile. <br />
+			<kbd>Strg</kbd>+<kbd>Enter</kbd> löscht die aktuelle Spalte. <kbd>Strg</kbd>+<kbd>Enter</kbd> löscht die aktuelle Zeile.
+			<br /><br />
+			<math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mrow>
+					
+            <mfenced open="(" close=")">
+               <mtable>
+                  <mtr>
+                    <mtd>
+												<msub>
+												<mi>a</mi>
+												<mrow><mn>1</mn><mn>1</mn></mrow>
+											</msub>
+										</mtd>
+                    <mtd>
+												<msub>
+												<mi>a</mi>
+												<mrow><mn>1</mn><mn>2</mn></mrow>
+											</msub>
+										</mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd>
+												<msub>
+												<mi>a</mi>
+												<mrow><mn>2</mn><mn>1</mn></mrow>
+											</msub>
+										</mtd>
+										 <mtd>
+												<msub>
+												<mi>a</mi>
+												<mrow><mn>2</mn><mn>2</mn></mrow>
+											</msub>
+										</mtd>
+                  </mtr>
+               </mtable>
+            </mfenced>
+            
+            <mfenced open="(" close=")">
+               <mtable>
+                  <mtr>
+                    <mtd>
+												<msub>
+												<mi>b</mi>
+												<mrow><mn>1</mn><mn>1</mn></mrow>
+											</msub>
+										</mtd>
+                    <mtd>
+												<msub>
+												<mi>b</mi>
+												<mrow><mn>1</mn><mn>2</mn></mrow>
+											</msub>
+										</mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd>
+												<msub>
+												<mi>b</mi>
+												<mrow><mn>2</mn><mn>1</mn></mrow>
+											</msub>
+										</mtd>
+										 <mtd>
+												<msub>
+												<mi>b</mi>
+												<mrow><mn>2</mn><mn>2</mn></mrow>
+											</msub>
+										</mtd>
+                  </mtr>
+               </mtable>
+            </mfenced>
+            
+            <mo>=</mo>
+            
+            <mfenced open="(" close=")">
+     <mtable>
+      <mtr>
+       <mtd>
+        <mrow>
+				<mstyle displaystyle="true">  
+         <munderover>
+          <mo stretchy="false">∑</mo>
+          <mrow>
+           <mi>i</mi>
+           <mo stretchy="false">=</mo>
+           <mn>1</mn>
+          </mrow>
+          <mn>2</mn>
+         </munderover>
+         </mstyle>
+         <mrow>
+          <msub>
+           <mi>a</mi>
+           <mrow>
+            <mn>1</mn>
+            <mi>i</mi>
+           </mrow>
+          </msub>
+          <msub>
+           <mi>b</mi>
+           <mrow>
+            <mi>i</mi>
+            <mn>1</mn>
+           </mrow>
+          </msub>
+         </mrow>
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+				<mstyle displaystyle="true">
+         <munderover>
+          <mo stretchy="false">∑</mo>
+          <mrow>
+           <mi>i</mi>
+           <mo stretchy="false">=</mo>
+           <mn>1</mn>
+          </mrow>
+          <mn>2</mn>
+         </munderover>
+         </mstyle>
+         <mrow>
+          <msub>
+           <mi>a</mi>
+           <mrow>
+            <mn>1</mn>
+            <mi>i</mi>
+           </mrow>
+          </msub>
+          <msub>
+           <mi>b</mi>
+           <mrow>
+            <mi>i</mi>
+            <mn>2</mn>
+           </mrow>
+          </msub>
+         </mrow>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr>
+       <mtd>
+        <mrow>
+					<mstyle displaystyle="true">
+         <munderover>
+          <mo stretchy="false">∑</mo>
+          <mrow>
+           <mi>i</mi>
+           <mo stretchy="false">=</mo>
+           <mn>1</mn>
+          </mrow>
+          <mn>2</mn>
+         </munderover>
+         </mstyle>
+         <mrow>
+          <msub>
+           <mi>a</mi>
+           <mrow>
+            <mn>2</mn>
+            <mi>i</mi>
+           </mrow>
+          </msub>
+          <msub>
+           <mi>b</mi>
+           <mrow>
+            <mi>i</mi>
+            <mn>1</mn>
+           </mrow>
+          </msub>
+         </mrow>
+        </mrow>
+       </mtd>
+       <mtd>
+        <mrow>
+					<mstyle displaystyle="true">
+         <munderover>
+          <mo stretchy="false">∑</mo>
+          <mrow>
+           <mi>i</mi>
+           <mo stretchy="false">=</mo>
+           <mn>1</mn>
+          </mrow>
+          <mn>2</mn>
+         </munderover>
+         </mstyle>
+         <mrow>
+          <msub>
+           <mi>a</mi>
+           <mrow>
+            <mn>2</mn>
+            <mi>i</mi>
+           </mrow>
+          </msub>
+          <msub>
+           <mi>b</mi>
+           <mrow>
+            <mi>i</mi>
+            <mn>2</mn>
+           </mrow>
+          </msub>
+         </mrow>
+        </mrow>
+       </mtd>
+      </mtr>
+     </mtable>
+            </mfenced>
+                        
+         </mrow>
+      </math>
+		</div>
+		<div class="box width100">
+			
+			<table class="matrix floatleft" data-matrix="1">
+				<tr>
+					 <td data-matrix="1" data-row="1" data-col="1"><input></td>
+				</tr>
+      </table>
+      
+			<table class="matrix floatright" data-matrix="2">
+				<tr>
+					 <td data-matrix="2" data-row="1" data-col="1"><input></td>
+				</tr>
+      </table>
+      
+     <div class="width100">
+			<button id="AB-btn">A · B</button>&nbsp;
+			<button id="BA-btn">B · A</button>
+		</div>
+		</div><!-- box -->
+		
+		
+		<ul id="row-operations">
+			<h4>Matrix elementar umformen <img id="close-operations" src="close.png" alt="close"></h4>
+			<li id="swap-lines">Zeile <input type="text"> mit Zeile <input type="text"> <button>vertauschen!</button></li>
+			<li id="multiply-line">Zeile <input type="text"> mit <input type="text"> <button>multiplizieren!</button></li>
+			<li id="add-to-line">Das (<input type="text">)-fache von Zeile <input type="text"> zu Zeile <input type="text"> <button>addieren!</button></li>
+		</ul><!-- box -->
+		
+		<h2>Protokoll</h2>
+		<div id="protocol" class="box width100">
+    </div> <!-- protocol --> 
+	</div> <!-- Main -->
+	
+	<!-- Reihenfolge wichtig wegen Definitionen: erst maths.js, dann HTML.js -->
+	<script src="math.js"></script>
+	<script src="Object.js"></script>
+	<script src="HTML.js"></script>
+</body>
+</html>
